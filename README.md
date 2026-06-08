@@ -17,12 +17,17 @@ real-world FHIR API integration.
 - Visualizes observation category distribution (laboratory vs vital signs)
 
 ## Key findings
-- 83% of observations in the dataset were laboratory results; 
-  17% were vital signs — consistent with real-world EHR documentation patterns
-- Most frequent lab markers included HbA1c, LDL cholesterol, triglycerides, 
-  creatinine, and plasma glucose — core cardiometabolic risk indicators
-- Dataset contained multilingual entries (English and Spanish LOINC displays), 
+- 83% of observations were laboratory results; 17% vital signs
+- Most frequent lab markers: HbA1c, LDL cholesterol, triglycerides, 
+  creatinine, glucose — core cardiometabolic risk indicators
+- Most common conditions: hypertension, diabetes, asthma
+- Coding completeness varied by resource: Conditions ~88% coded, 
+  Observations ~56%, Medications ~46% — highlights real-world data 
+  quality challenges in production EHR systems
+- Dataset contained multilingual entries (English, Spanish, German) 
   demonstrating FHIR's international interoperability in practice
+- Medication coding mixed RxNorm and SNOMED-CT systems — 
+  common inconsistency in real FHIR implementations
 
 ## Technologies used
 - Python (requests, pandas, matplotlib)
